@@ -1,5 +1,75 @@
-$bgColor: blue;
+@use 'variaveis';
+@use 'hero';
+@use 'header';
+
+@font-face {
+    font-family: WizardWorld;
+    src: url(../../assets/fonts/WizardWorldSimplified.ttf);
+    font-weight: 400;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
 
 body {
-    background-color: $bgColor;
+    background-color: variaveis.$corDeFundo;
+}
+
+@mixin text($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+}
+
+@mixin title($fontSize: 40px) {
+    @include text($fontSize);
+    font-family: WizardWorld;
+}
+
+.text--big {
+    @include text(18px);
+}
+
+.text {
+    @include text;
+}
+
+.text--small {
+    @include text(12px);
+}
+
+.title--big {
+    @include title(44px);
+}
+
+.title {
+    @include title;
+}
+
+.title--small {
+    @include title(28px);
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    font-size: 18px;
+    color: variaveis.$corRoxa;
+    background-color: variaveis.$corDeFundo;
+    text-transform: uppercase;
+    border-radius: 4px;
+    text-decoration: none;
+    padding: 8px 14px;
+    letter-spacing: 1px;
+    border: 1px solid variaveis.$corRoxa;
+
+    &:hover {
+        background-color: lighten($color: variaveis.$corRoxa, $amount: 5%);
+    }
 }

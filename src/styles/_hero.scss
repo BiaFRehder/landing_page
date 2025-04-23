@@ -1,0 +1,26 @@
+@use 'variaveis';
+
+.hero {
+    padding: 5.6vw;
+    height: 95vh;
+    background-image: url(../../src/images/harry-potter.jpg);
+    background-size: cover;
+    color: variaveis.$corDeTexto;
+    position: relative;
+    
+    &__content {
+        padding-top: 40vh;
+        height: 100%;
+        text-align: center;
+        justify-content: end;
+        max-width: 640px;
+
+        &__branding {
+            padding-bottom: 40px;
+
+            img {
+                height: 150px;
+            }
+        }
+    }
+}
