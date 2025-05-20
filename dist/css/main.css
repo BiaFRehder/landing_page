@@ -22,15 +22,26 @@
 
 .header {
   color: #f9f9f9;
+  background-color: #040714;
   position: sticky;
   top: 0;
   left: 0;
+  z-index: 1;
+}
+.header--is-hidden {
+  background-color: transparent;
+  transition: background-color 0.5s ease;
+}
+.header--is-hidden .header__logo {
+  opacity: 0;
   visibility: hidden;
+  transition: opacity 0.5s ease;
 }
 .header__container {
   padding: 8px 36px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .header__logo {
   max-width: 200px;
@@ -50,6 +61,56 @@
   color: #f9f9f9;
 }
 
+.shows {
+  padding: 0 5.6vw;
+  padding-top: calc(5.6vw + 50px);
+}
+.shows__list {
+  display: none;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+}
+.shows__list__livros {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.shows__list--is-active {
+  display: grid;
+}
+.shows__list__items {
+  list-style-type: none;
+}
+.shows__list__items a {
+  text-decoration: none;
+}
+.shows__list__items .titulo {
+  display: flex;
+  height: 30px;
+  margin: 24px 0;
+  align-items: center;
+  width: 100%;
+}
+.shows__list__items .titulo h4 {
+  font-size: 18px;
+}
+.shows__list__items img {
+  width: 100%;
+}
+.shows__tabs {
+  display: flex;
+  justify-content: center;
+}
+.shows__tabs__button {
+  margin: 0 1vw 24px;
+  max-width: 150px;
+  padding-bottom: 5px;
+}
+.shows__tabs__button:hover {
+  border-bottom: 5px solid #f9f9f9;
+}
+.shows__tabs__button--is-active {
+  border-color: #f9f9f9;
+}
+
 @font-face {
   font-family: WizardWorld;
   src: url(../../assets/fonts/WizardWorldSimplified.ttf);
@@ -60,6 +121,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Roboto, sans-serif;
+  color: #f9f9f9;
 }
 
 body {
@@ -106,7 +168,7 @@ body {
   width: 100%;
   height: 60px;
   font-size: 18px;
-  color: #6421ff;
+  color: #f9f9f9;
   background-color: #040714;
   text-transform: uppercase;
   border-radius: 4px;
@@ -115,6 +177,46 @@ body {
   letter-spacing: 1px;
   border: 1px solid #6421ff;
 }
+.button__secundary {
+  font-size: 12px;
+  margin-right: 12px;
+  width: 10vw;
+}
+.button__shows {
+  color: #f9f9f9;
+  background-color: #040714;
+  font-weight: bold;
+  border: none;
+  border-bottom: 5px solid transparent;
+  cursor: pointer;
+}
+.button__shows:hover {
+  transform: scale(1.1);
+}
 .button:hover {
-  background-color: rgb(117.8040540541, 58.5, 255);
+  background-color: #6421ff;
+}
+
+.image-news {
+  padding: 0 5.6vw 5.6vw;
+  padding-top: calc(5.6vw + 50px);
+  display: block;
+  position: relative;
+  text-align: end;
+}
+.image-news h2 {
+  text-align: center;
+}
+.image-news a {
+  text-decoration: none;
+  position: relative;
+  top: -40px;
+  padding-right: 16px;
+}
+.image-news a:hover {
+  font-size: 20px;
+}
+.image-news img {
+  padding: 24px 0 0;
+  width: 100%;
 }

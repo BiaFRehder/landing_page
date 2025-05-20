@@ -2,15 +2,30 @@
 
 .header {
     color: variaveis.$corDeTexto;
+    background-color: variaveis.$corDeFundo;
     position: sticky;
     top: 0;
     left: 0;
-    visibility: hidden;
+    z-index: 1;
+
+    &--is-hidden {
+        background-color: transparent;
+        transition: background-color .5s ease;
+
+        .header {
+            &__logo {
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity .5s ease;
+            }
+        }
+    }
     
     &__container {
         padding: 8px 36px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     &__logo {
@@ -21,7 +36,6 @@
 
     &__links {
         display: flex;
-        
         
         &__item {
             margin: 5px;

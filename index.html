@@ -10,6 +10,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
 <body>
+    <header class="header">
+        <div class="header__container">
+            <h1>
+                <img class="header__logo" src="src/images/logo.png" alt="Harry Potter">
+            </h1>
+            <ul class="header__links">
+                <li class="header__links__item">
+                    <a class="button" href="#shows">Filmes</a>
+                </li>
+                <li class="header__links__item">
+                    <a class="button" href="#shows">Livros</a>
+                </li>
+                <li class="header__links__item">
+                    <a class="button" href="#news">Novidades</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    
     <section class="hero">
         <div class="hero__content">
             <div class="hero__content__branding">
@@ -18,23 +37,108 @@
             <p class="text--big">A história de um jovem bruxo destinado a enfrentar as forças das trevas</p>
         </div>
     </section>
-    <header class="header">
-        <div class="header__container">
-            <h1>
-                <img class="header__logo" src="src/images/logo.png" alt="Harry Potter">
-            </h1>
-            <ul class="header__links">
-                <li class="header__links__item">
-                    <a class="button" href="#">Filmes</a>
-                </li>
-                <li class="header__links__item">
-                    <a class="button" href="#">Livros</a>
-                </li>
-                <li class="header__links__item">
-                    <a class="button" href="#">Novidades</a>
-                </li>
-            </ul>
-        </div>
-    </header>
+
+
+    <section id="shows" class="shows">
+        <nav class="shows__tabs">
+            <button data-tab-button="filmes" class="title button__shows shows__tabs__button shows__tabs__button--is-active">
+                Filmes
+            </button>
+            <button data-tab-button="livros" class="title button__shows  shows__tabs__button">
+                Livros
+            </button>
+        </nav>
+        <ul data-tab-id="filmes" class="shows__list shows__list__filmes shows__list--is-active">
+            <li class="shows__list__items">
+                <a href="https://www.max.com/br/pt/movies/harry-potter-e-a-pedra-filosofal/4b990c5d-38ab-4daf-8092-2617cbc6d062" target="_blank">
+                    <img src="src/images/filmes/filme_1.png" alt="Filme: Harry Potter e a Pedra Filosofal">
+                </a>
+            </li>
+            <li class="shows__list__items">
+                <a href="https://www.max.com/br/pt/movies/harry-potter-e-a-camara-secreta/48674b82-9076-4080-a40c-379efad5eb89" target="_blank">
+                    <img src="src/images/filmes/filme_2.png" alt="Filme: Harry Potter e a Câmara Secreta">
+                </a>
+            </li>
+            <li class="shows__list__items">
+                <a href="https://www.max.com/br/pt/movies/harry-potter-e-o-prisioneiro-de-azkaban/73553a76-1658-45f6-9e26-1b9c4443b0d6" target="_blank">
+                    <img src="src/images/filmes/filme_3.png" alt="Filme: Harry Potter e o Prisioneiro de Azkaban">
+                </a>
+            </li>
+            <li class="shows__list__items">
+                <a href="https://www.max.com/br/pt/movies/harry-potter-e-o-calice-de-fogo/d2e9ff29-e71d-4eae-9a4b-7cd0e00236ea" target="_blank">
+                    <img src="src/images/filmes/filme_4.png" alt="Filme: Harry Potter e o Cálice de Fogo">
+                </a>
+            </li>
+            <li class="shows__list__items">
+                <a href="https://www.max.com/br/pt/movies/harry-potter-e-a-ordem-da-fenix/25768909-39b8-4cb2-a39f-e059460f7add" target="_blank">
+                    <img src="src/images/filmes/filme_5.png" alt="Filme: Harry Potter e a Ordem da Fênix">
+                </a>
+            </li>
+            <li class="shows__list__items">
+                <a href="https://www.max.com/br/pt/movies/harry-potter-e-o-enigma-do-principe/cba1d85a-5ef4-4ba3-b537-1d24554fe85c" target="_blank">
+                    <img src="src/images/filmes/filme_6.png" alt="Filme: Harry Potter e o Enigma do Príncipe">
+                </a>
+            </li>
+            <li class="shows__list__items">
+                <a href="https://www.max.com/br/pt/movies/harry-potter-e-as-reliquias-da-morte-parte-1/2c394a2d-7d1d-481d-a420-76ee1bee01a7" target="_blank">
+                    <img src="src/images/filmes/filme_7.png" alt="Filme: Harry Potter e as Relíquias da Morte - Parte 1">
+                </a>
+            </li>
+            <li class="shows__list__items">
+                <a href="https://www.max.com/br/pt/movies/harry-potter-e-as-reliquias-da-morte-parte-2/1890c8c5-2f40-4140-a363-064428201826" target="_blank">
+                    <img src="src/images/filmes/filme_8.png" alt="Filme: Harry Potter e e as Relíquias da Morte - Parte 2">
+                </a>
+            </li>
+        </ul>
+        <ul data-tab-id="livros" class="shows__list shows__list__livros">
+            <li class="shows__list__items">
+                <a href="https://www.google.com/search?q=harry+potter+e+a+pedra+filosofal&sca_esv=36354fdb691823cb&rlz=1C1ONGR_enBR1144BR1144&udm=28&biw=1920&bih=945&sxsrf=AHTn8zo0IvtzGL1ohQxtaJBZu9WDacVQfg%3A1747765859845&ei=Y8osaMmtM4655OUP4IOfuAw&oq=harry+potter+e+&gs_lp=Ehlnd3Mtd2l6LW1vZGVsZXNzLXNob3BwaW5nIg9oYXJyeSBwb3R0ZXIgZSAqAggAMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIHEAAYgAQYCjIFEAAYgAQyBRAAGIAEMgcQABiABBgKMgUQABiABDIFEAAYgARIySFQkRFYqRNwAngBkAEAmAF9oAHFAqoBAzEuMrgBAcgBAPgBAZgCBaAC2ALCAgoQABiwAxjWBBhHwgIHECMYtAQYJ5gDAIgGAZAGCJIHAzIuM6AH_xOyBwMwLjO4B9ICwgcFMC4yLjPIBxA&sclient=gws-wiz-modeless-shopping" target="_blank">
+                    <img src="src/images/livros/livro_1.jpg" alt="Livro: Harry Potter e a Pedra Filosofal">
+                </a>
+            </li>
+            <li class="shows__list__items">
+                <a href="https://www.google.com/search?q=harry+potter+e+a+c%C3%A2mara+secreta&sca_esv=36354fdb691823cb&rlz=1C1ONGR_enBR1144BR1144&udm=28&biw=1920&bih=945&sxsrf=AHTn8zps7kY2h_uOK4HpB8ZkqhNzPPSomg%3A1747765890154&ei=gsosaMqeCZLY5OUPwqCkeQ&oq=harry+potter+e+a+cama&gs_lp=Ehlnd3Mtd2l6LW1vZGVsZXNzLXNob3BwaW5nIhVoYXJyeSBwb3R0ZXIgZSBhIGNhbWEqAggBMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBhAAGBYYHjIGEAAYFhgeSJMSUOwCWL4GcAF4AZABAJgBf6ABygOqAQMwLjS4AQHIAQD4AQGYAgWgAv0DwgIKEAAYsAMY1gQYR5gDAIgGAZAGCJIHAzEuNKAH3RiyBwMwLjS4B_gDwgcHMC4xLjEuM8gHLQ&sclient=gws-wiz-modeless-shopping" target="_blank">
+                    <img src="src/images/livros/livro_2.jpg" alt="Livro: Harry Potter e a Câmara Secreta">
+                </a>
+            </li>
+            <li class="shows__list__items">
+                <a href="https://www.google.com/search?q=harry+potter+e+o+prisioneiro+de+azkaban&sca_esv=36354fdb691823cb&rlz=1C1ONGR_enBR1144BR1144&udm=28&biw=1920&bih=945&sxsrf=AHTn8zpK0hw-MOLxXUj-IHpzw5HmcFDZyg%3A1747765897730&ei=icosaM6kLNqe5OUPhuWb4Q8&oq=harry+potter+e+o&gs_lp=Ehlnd3Mtd2l6LW1vZGVsZXNzLXNob3BwaW5nIhBoYXJyeSBwb3R0ZXIgZSBvKgIIATIFEAAYgAQyBxAAGIAEGAoyBRAAGIAEMgUQABiABDIFEAAYgAQyBxAAGIAEGAoyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAESI0aUMEPWMEPcAF4AZABAJgBc6ABc6oBAzAuMbgBAcgBAPgBAZgCAqACesICChAAGLADGNYEGEeYAwCIBgGQBgiSBwMxLjGgB6QHsgcDMC4xuAd3wgcFMC4xLjHIBwU&sclient=gws-wiz-modeless-shopping" target="_blank">
+                    <img src="src/images/livros/livro_3.jpg" alt="Livro: Harry Potter e o Prisioneiro de Azkaban">
+                </a>
+            </li>
+            <li class="shows__list__items">
+                <a href="https://www.google.com/search?q=harry+potter+e+o+c%C3%A1lice+de+fogo&sca_esv=36354fdb691823cb&rlz=1C1ONGR_enBR1144BR1144&udm=28&biw=1920&bih=945&sxsrf=AHTn8zpLYpb9dZm6nbSLkGTsTcW7Hu8e0Q%3A1747765930008&ei=qsosaKkipp7k5Q_l6p7BDA&oq=harry+potter+e+o+cal&gs_lp=Ehlnd3Mtd2l6LW1vZGVsZXNzLXNob3BwaW5nIhRoYXJyeSBwb3R0ZXIgZSBvIGNhbCoCCAAyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeSPwXUIwGWK8NcAF4AZABAJgBdaABqQSqAQMwLjW4AQHIAQD4AQGYAgagAs4EwgIKEAAYsAMY1gQYR8ICBxAAGIAEGAqYAwCIBgGQBgiSBwMxLjWgB60jsgcDMC41uAfKBMIHBzAuMi4zLjHIByA&sclient=gws-wiz-modeless-shopping" target="_blank">
+                    <img src="src/images/livros/livro_4.jpg" alt="Livro: Harry Potter e o Cálice de Fogo">
+                </a>
+            </li>
+            <li class="shows__list__items">
+                <a href="https://www.google.com/search?q=harry+potter+e+a+ordem+da+fenix&sca_esv=36354fdb691823cb&rlz=1C1ONGR_enBR1144BR1144&udm=28&biw=1920&bih=945&sxsrf=AHTn8zqRhkHKBarV_o3NMMzyTTTvAvCzHg%3A1747765975300&ei=18osaPiFEv-P5OUPkNuv2Qw&oq=harry+potter+e+a+orde&gs_lp=Ehlnd3Mtd2l6LW1vZGVsZXNzLXNob3BwaW5nIhVoYXJyeSBwb3R0ZXIgZSBhIG9yZGUqAggFMgcQABiABBgKMgcQABiABBgKMgcQABiABBgKMgcQABiABBgKMgUQABiABDIFEAAYgAQyBxAAGIAEGAoyBhAAGBYYHjIIEAAYFhgKGB4yBhAAGBYYHkjDKVDaBViQDnABeAGQAQCYAYABoAGSB6oBAzAuOLgBAcgBAPgBAZgCCKACywbCAgoQABiwAxjWBBhHwgIHECMYtAQYJ5gDAIgGAZAGCJIHAzEuN6AHrkGyBwMwLje4B8gGwgcHMC4yLjQuMsgHNA&sclient=gws-wiz-modeless-shopping">
+                    <img src="src/images/livros/livro_5.jpg" alt="Livro: Harry Potter e a Ordem da Fênix">
+                </a>
+            </li>
+            <li class="shows__list__items">
+                <a href="https://www.google.com/search?q=harry+potter+e+o+enigma+do+pr%C3%ADncipe&sca_esv=36354fdb691823cb&rlz=1C1ONGR_enBR1144BR1144&udm=28&biw=1920&bih=945&sxsrf=AHTn8zo8nQApVDRygkwxDyWBN86j_CpW4A%3A1747765935685&ei=r8osaPLPKbnV5OUP-OCEsAE&oq=harry+potter+e+o+en&gs_lp=Ehlnd3Mtd2l6LW1vZGVsZXNzLXNob3BwaW5nIhNoYXJyeSBwb3R0ZXIgZSBvIGVuKgIIADIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBhAAGBYYHjIGEAAYFhgeSNohUM4SWOcYcAF4AZABAJgBdKABvwOqAQMwLjS4AQHIAQD4AQGYAgWgAuoDwgIKEAAYsAMY1gQYR8ICBxAAGIAEGAqYAwCIBgGQBgiSBwMxLjSgB6QZsgcDMC40uAfmA8IHBzAuMi4xLjLIByc&sclient=gws-wiz-modeless-shopping" target="_blank">
+                    <img src="src/images/livros/livro_6.jpg" alt="Livro: Harry Potter e o Enigma do Príncipe">
+                </a>
+            </li>
+            <li class="shows__list__items">
+                <a href="https://www.google.com/search?q=harry+potter+e+as+rel%C3%ADquias+da+morte&sca_esv=36354fdb691823cb&rlz=1C1ONGR_enBR1144BR1144&udm=28&biw=1920&bih=945&sxsrf=AHTn8zp-kQR_3LMjeeqM5ix-URLg5RNt1Q%3A1747765996269&ei=7MosaL-YEOj75OUP_PiwwQE&oq=harry+potter+e+as&gs_lp=Ehlnd3Mtd2l6LW1vZGVsZXNzLXNob3BwaW5nIhFoYXJyeSBwb3R0ZXIgZSBhcyoCCAAyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHkjsClDIA1jIA3ABeAGQAQCYAXygAXyqAQMwLjG4AQHIAQD4AQGYAgKgAocBwgIKEAAYsAMY1gQYR5gDAIgGAZAGCJIHAzEuMaAHjgayBwMwLjG4B4MBwgcFMC4xLjHIBwg&sclient=gws-wiz-modeless-shopping">
+                    <img src="src/images/livros/livro_7.jpg" alt="Livro: Harry Potter e as Relíquias da Morte">
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <section id="news" class="image-news">
+        <h2 class="title--big">Nova série</h2>
+        <picture>
+            <img src="src/images/news.png" alt="Hogwarts">
+        </picture>
+        <a href="https://www.google.com/search?sa=X&sca_esv=7f7d0f0d30ce4bfd&rlz=1C1ONGR_enBR1144BR1144&sxsrf=AHTn8zr75p4hlVslAd6EE-tzgQvDcXrkiQ:1747765609341&q=serie+harry+potter&tbm=nws&source=univ&tbo=u&ved=2ahUKEwiKpq6i1rKNAxXvBLkGHYnJA9kQt8YBKAF6BAgMEAM&biw=1920&bih=945&dpr=1" class="text--big" target="_blank">
+            Veja mais
+        </a>
+    </section>
+
+    <script src="dist/js/main.js"></script>
 </body>
 </html>
