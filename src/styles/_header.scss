@@ -12,12 +12,10 @@
         background-color: transparent;
         transition: background-color .5s ease;
 
-        .header {
-            &__logo {
-                opacity: 0;
-                visibility: hidden;
-                transition: opacity .5s ease;
-            }
+        .header, .header__logo, .header__burguer {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity .5s ease;
 
             @media (max-width: 768px) {
                 .material-symbols-outlined {
@@ -25,6 +23,7 @@
                     visibility: hidden;
                     transition: opacity .5s ease;
                 }
+
             }
         }
     }

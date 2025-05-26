@@ -9,7 +9,6 @@
   .hero {
     background-image: url(../../src/images/capa-mobile.jpg);
     background-position: center;
-    z-index: 1;
   }
 }
 .hero__content {
@@ -44,13 +43,13 @@
   background-color: transparent;
   transition: background-color 0.5s ease;
 }
-.header--is-hidden .header__logo {
+.header--is-hidden .header, .header--is-hidden .header__logo, .header--is-hidden .header__burguer {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s ease;
 }
 @media (max-width: 768px) {
-  .header--is-hidden .header .material-symbols-outlined {
+  .header--is-hidden .header .material-symbols-outlined, .header--is-hidden .header__logo .material-symbols-outlined, .header--is-hidden .header__burguer .material-symbols-outlined {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s ease;
