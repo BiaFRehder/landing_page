@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harry Potter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="dist/css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,20 +13,21 @@
 <body>
     <header class="header">
         <div class="header__container">
-            <h1>
-                <img class="header__logo" src="src/images/logo.png" alt="Harry Potter">
-            </h1>
-            <ul class="header__links">
-                <li class="header__links__item">
-                    <a class="button" href="#shows">Filmes</a>
-                </li>
-                <li class="header__links__item">
-                    <a class="button" href="#shows">Livros</a>
-                </li>
-                <li class="header__links__item">
-                    <a class="button" href="#news">Novidades</a>
-                </li>
-            </ul>
+            <img class="header__logo" src="src/images/logo.png" alt="Harry Potter">
+            <div class="menu">
+                <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
+                <ul id="itens" class="header__links">
+                    <li class="header__links__item">
+                        <a class="button" data-tab-button="filmes" href="#shows">Filmes</a>
+                    </li>
+                    <li class="header__links__item">
+                        <a class="button" data-tab-button="livros" href="#shows">Livros</a>
+                    </li>
+                    <li class="header__links__item">
+                        <a class="button" href="#news">Novidades</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
     
@@ -41,10 +43,10 @@
 
     <section id="shows" class="shows">
         <nav class="shows__tabs">
-            <button data-tab-button="filmes" class="title button__shows shows__tabs__button shows__tabs__button--is-active">
+            <button data-tab-button="filmes" class="title shows__tabs__button shows__tabs__button--is-active">
                 Filmes
             </button>
-            <button data-tab-button="livros" class="title button__shows  shows__tabs__button">
+            <button data-tab-button="livros" class="title shows__tabs__button">
                 Livros
             </button>
         </nav>
@@ -132,12 +134,19 @@
     <section id="news" class="image-news">
         <h2 class="title--big">Nova série</h2>
         <picture>
-            <img src="src/images/news.png" alt="Hogwarts">
+            <source media="(max-width: 768px)" srcset="src/images/news-mobile.jpg">
+            <img src="src/images/news.jpg" alt="Hogwarts">
         </picture>
         <a href="https://www.google.com/search?sa=X&sca_esv=7f7d0f0d30ce4bfd&rlz=1C1ONGR_enBR1144BR1144&sxsrf=AHTn8zr75p4hlVslAd6EE-tzgQvDcXrkiQ:1747765609341&q=serie+harry+potter&tbm=nws&source=univ&tbo=u&ved=2ahUKEwiKpq6i1rKNAxXvBLkGHYnJA9kQt8YBKAF6BAgMEAM&biw=1920&bih=945&dpr=1" class="text--big" target="_blank">
             Veja mais
         </a>
     </section>
+
+    <footer>
+        <p class="text--small">
+            &copy; 2025 Harry Potter e suas empresas afiliadas. Todos os direitos reservados.
+        </p>
+    </footer>
 
     <script src="dist/js/main.js"></script>
 </body>

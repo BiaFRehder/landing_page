@@ -55,3 +55,11 @@ function escondeTodasAbas() {
         tabsContainer[i].classList.remove('shows__list--is-active');
     }
 }
+
+function clickMenu() {
+    if (itens.style.display == 'flex') {
+        itens.style.display = 'none'
+    } else {
+        itens.style.display = 'flex'
+    }
+}

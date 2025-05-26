@@ -21,6 +21,24 @@ body {
     background-color: variaveis.$corDeFundo;
 }
 
+.menu {
+    display: block;
+    align-items: center;
+    justify-content: space-between;
+
+    #burguer {
+        color: variaveis.$corDeTexto;
+        cursor: pointer;
+        display: none;
+        padding: 0 18px;
+    
+        @media (max-width: 768px) {
+            display: block;
+            text-align: center;
+        }
+    }
+}
+
 @mixin text($fontSize: 16px) {
     font-size: $fontSize;
     line-height: $fontSize + 10px;
@@ -33,26 +51,50 @@ body {
 
 .text--big {
     @include text(18px);
+
+    @media (max-width: 768px) {
+        @include text(15px);
+    }
 }
 
 .text {
     @include text;
+    
+    @media (max-width: 768px) {
+        @include text(14px);
+    }
 }
 
 .text--small {
     @include text(12px);
+
+    @media (max-width: 768px) {
+        @include text(11px);
+    }
 }
 
 .title--big {
     @include title(44px);
+
+    @media (max-width: 768px) {
+        @include title(26px);
+    }
 }
 
 .title {
     @include title;
+
+    @media (max-width: 768px) {
+        @include title(24px);
+    }
 }
 
 .title--small {
     @include title(28px);
+
+    @media (max-width: 768px) {
+        @include title(22px);
+    }
 }
 
 .button {
@@ -77,30 +119,21 @@ body {
         width: 10vw;
     }
 
-    &__shows {
-        color: variaveis.$corDeTexto;
-        background-color: variaveis.$corDeFundo;
-        font-weight: bold;
-        border: none;
-        border-bottom: 5px solid transparent;
-        cursor: pointer;
-
-        &:hover {
-            transform: scale(1.10);
-        }
-    }
-
     &:hover {
         background-color: variaveis.$corRoxa;
     }
 }
 
 .image-news {
-    padding: 0 5.6vw 5.6vw;
+    padding: 0 5.6vw;
     padding-top: calc(5.6vw + 50px);
     display: block;
     position: relative;
     text-align: end;
+
+    @media (max-width: 768px) {
+        padding-top: calc(5.6vw + 175px);
+    }
     
     h2 {
         text-align: center;
@@ -121,4 +154,11 @@ body {
         padding: 24px 0 0;
         width: 100%;
     }
+}
+
+footer {
+    justify-items: center;
+    align-content: center;
+    background-color: darken($color: variaveis.$corDeFundo, $amount: 2%);
+    height: 50px;
 }
